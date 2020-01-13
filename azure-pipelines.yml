@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest' #ubuntu-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
@@ -26,8 +26,8 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'drop' 
-    publishLocation: 'FilePath' # Options: container, filePath
-    targetPath: '$(System.DefaultWorkingDirectory)' # Required when publishLocation == FilePath
+    publishLocation: 'Container' # Options: container, filePath
+    #targetPath: '$(System.DefaultWorkingDirectory)' # Required when publishLocation == FilePath
     #parallel: false # Optional
     #parallelCount: # Optional
     #fileCopyOptions: #Optional
