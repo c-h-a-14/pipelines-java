@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- azure-pipelines-t1
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -35,7 +35,7 @@ steps:
     #tags: # Optional
     downloadType: 'specific' # Choose whether to download a single artifact or all artifacts of a specific build. Options: single, specific
     #artifactName: # Required when downloadType == Single
-    itemPattern: 'drop/' # Optional
+    #itemPattern: 'drop/' # Optional
     downloadPath: '$(System.ArtifactsDirectory)' 
     #parallelizationLimit: '8' # Optional
 # Publish build artifacts
