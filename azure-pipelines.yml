@@ -35,6 +35,6 @@ steps:
     #tags: # Optional
     downloadType: 'specific' # Choose whether to download a single artifact or all artifacts of a specific build. Options: single, specific
     #artifactName: # Required when downloadType == Single
-    #itemPattern: '**' # Optional
+    itemPattern: 'drop/' # Optional
     downloadPath: '$(System.ArtifactsDirectory)' 
     #parallelizationLimit: '8' # Optional    
